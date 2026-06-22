@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     # cli
+    zig
     neovim
     john
     stylua
