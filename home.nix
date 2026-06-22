@@ -29,16 +29,19 @@
     obs-studio
     spotify
 
+    # icons
+    papirus-icon-theme
+
     # fonts
     nerd-fonts.caskaydia-cove
   ];
 
   fonts.fontconfig.enable = true;
 
+  # terminal
   programs.alacritty = {
     enable = true;
     settings = {
-      terminal.shell = "/bin/fish";
       colors = {
         primary = {
           background = "#32302f";
@@ -81,6 +84,20 @@
     };
   };
 
+  # cli tools
+  programs.git = {
+    enable = true;
+    settings = {
+      init.defaultBranch = "main";
+      user = {
+        name = "the man of the hour";
+        email = "him@localhost";
+      };
+    };
+  };
+
+  programs.fd.enable = true;
+
   programs.ripgrep.enable = true;
 
   programs.bat = {
@@ -108,18 +125,36 @@
     nix-direnv.enable = true;
   };
 
+  # shell config
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  };
+
   programs.fish = {
     enable = true;
-    interactiveShellInit = ''
-      set fish_greeting
-      fish_vi_key_bindings
-    '';
+    interactiveShellInit = "fish_vi_key_bindings";
+    functions = {
+      fish_greeting.body = "";
+      fish_right_prompt.body = ''
+        if test -n "$IN_NIX_SHELL"
+          echo -n "(nix)"
+        end
+      '';
+    };
     shellAliases = {
       ls = "eza";
       cat = "bat";
     };
   };
 
+  # guis
   programs.vesktop = {
     enable = true;
     settings = {
