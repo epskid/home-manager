@@ -8,13 +8,28 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
+    # cli
     neovim
     john
+    stylua
+    tree-sitter
+
+    # gaming
     olympus
-    aseprite
     vvvvvv
-    cemu-ti
     godot
+    protonup-qt
+    prismlauncher
+
+    # util
+    aseprite
+    cemu-ti
+    tor-browser
+    asunder
+    obs-studio
+    spotify
+
+    # fonts
     nerd-fonts.caskaydia-cove
   ];
 
@@ -104,6 +119,20 @@
       cat = "bat";
     };
   };
+
+  programs.vesktop = {
+    enable = true;
+    settings = {
+      arRPC = false;
+      checkUpdates = false;
+      minimizeToTray = true;
+      tray = true;
+      customTitleBar = false;
+      discordBranch = "stable";
+    };
+  };
+
+  programs.obsidian.enable = true;
 
   programs.home-manager.enable = true;
 }
