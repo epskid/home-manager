@@ -2,11 +2,19 @@
 
 with config; {
   home.packages = with pkgs; [
+    # languages
     zig
+    ghc
+    haskell-language-server
+    typst
+
+    # neovim stuff
     neovim
-    john
     stylua
     tree-sitter
+
+    # skid stuff
+    john
   ];
 
   programs.git = {

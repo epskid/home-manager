@@ -14,7 +14,10 @@ with config; {
 
   programs.fish = {
     enable = true;
-    interactiveShellInit = "fish_vi_key_bindings";
+    interactiveShellInit = ''
+      fish_vi_key_bindings
+      fish_add_path ~/.cargo/bin/
+    '';
     functions = {
       fish_greeting.body = "";
       fish_right_prompt.body = ''
