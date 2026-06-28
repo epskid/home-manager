@@ -1,7 +1,7 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
-  home.sessionVariables.PAGER = "${lib.getExe pkgs.nvimpager}";
+  home.sessionVariables.MANPAGER = "nvim +Man!";
 
   programs.neovim = {
     enable = true;
