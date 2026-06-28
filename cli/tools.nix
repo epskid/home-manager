@@ -3,13 +3,15 @@
 {
   home.packages = with pkgs; [
     # languages
+    uv
+    bun
     zig
     ghc
-    haskell-language-server
     typst
 
     # skid stuff
     john
+    yt-dlp
   ];
 
   programs.git = {

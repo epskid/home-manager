@@ -12,6 +12,7 @@
       # lsp
       nil
       tinymist
+      haskell-language-server
     ];
     viAlias = true;
     vimAlias = true;
