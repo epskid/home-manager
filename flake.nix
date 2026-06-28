@@ -12,10 +12,17 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
+
+      # remove when vesktop is updated!!
+      insecure = import nixpkgs {
+        inherit system;
+        config.permittedInsecurePackages = [ "pnpm-10.29.2" ];
+      };
     in
     {
       homeConfigurations.jackblack = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit insecure; };
         modules = [ ./home.nix ];
       };
     };

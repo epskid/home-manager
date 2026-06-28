@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, insecure, ... }:
 
 {
   home.packages = with pkgs; [
@@ -12,6 +12,7 @@
 
   programs.vesktop = {
     enable = true;
+    package = insecure.vesktop;
     settings = {
       arRPC = false;
       checkUpdates = false;
