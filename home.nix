@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -19,4 +19,9 @@
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
+
+  nix.package = pkgs.nix;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
