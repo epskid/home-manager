@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
     ./cli/fish.nix
     ./cli/tools.nix
+    ./cli/neovim.nix
     ./cli/terminal.nix
 
     ./gui/tools.nix

@@ -1,6 +1,6 @@
-{ config, ... }:
+{ ... }:
 
-with config; {
+{
   programs.alacritty = {
     enable = true;
     settings = {
@@ -45,5 +45,4 @@ with config; {
       };
     };
   };
-
 }

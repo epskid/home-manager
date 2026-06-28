@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-with config; {
+{
   programs.bash = {
     enable = true;
     initExtra = ''

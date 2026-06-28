@@ -1,6 +1,6 @@
-{ config, pkgs, ...}:
+{ pkgs, ...}:
 
-with config; {
+{
   home.packages = with pkgs; [
     olympus
     vvvvvv

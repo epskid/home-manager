@@ -1,17 +1,12 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-with config; {
+{
   home.packages = with pkgs; [
     # languages
     zig
     ghc
     haskell-language-server
     typst
-
-    # neovim stuff
-    neovim
-    stylua
-    tree-sitter
 
     # skid stuff
     john
