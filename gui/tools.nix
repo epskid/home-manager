@@ -7,7 +7,6 @@
     tor-browser
     asunder
     obs-studio
-    spotify
   ];
 
   programs.vesktop = {

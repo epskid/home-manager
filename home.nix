@@ -9,6 +9,7 @@
 
     ./gui/tools.nix
     ./gui/games.nix
+    ./gui/spotify.nix
     ./gui/theming.nix
   ];
 
