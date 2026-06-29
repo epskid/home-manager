@@ -4,7 +4,7 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    plugins = with pkgs; [
+    extraPackages = with pkgs; [
       # lsp
       nil
       zls
@@ -16,7 +16,14 @@
       haskell-language-server
     ];
     settings = {
-      theme = "gruvbox_light";
+      theme = "gruvbox_dark_soft_transparent";
+      editor.cursor-shape.insert = "bar";
+    };
+    themes = {
+      gruvbox_dark_soft_transparent = {
+        inherits = "gruvbox_dark_soft";
+        "ui.background" = "transparent";
+      };
     };
   };
 }
