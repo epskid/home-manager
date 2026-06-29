@@ -2,14 +2,13 @@
 
 {
   imports = [
+    ./cli/apps.nix
     ./cli/fish.nix
-    ./cli/tools.nix
     ./cli/neovim.nix
     ./cli/terminal.nix
 
-    ./gui/tools.nix
+    ./gui/apps.nix
     ./gui/games.nix
-    ./gui/spotify.nix
     ./gui/theming.nix
   ];
 

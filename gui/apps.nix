@@ -1,4 +1,4 @@
-{ pkgs, insecure, ... }:
+{ pkgs, insecure, spicetifyPkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -20,6 +20,15 @@
       customTitleBar = false;
       discordBranch = "stable";
     };
+  };
+
+  programs.spicetify = {
+    enable = true;
+    enabledExtensions = with spicetifyPkgs.extensions; [
+      adblockify
+      hidePodcasts
+      keyboardShortcut
+    ];
   };
 
   programs.obsidian.enable = true;
