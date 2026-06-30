@@ -23,13 +23,25 @@ let
 in
 {
   home.packages = with pkgs; [
+    # 2d
+    gimp
+    krita
     aseprite
-    cemu-ti
-    tor-browser
+
+    # 3d
+    blender
+
+    # audio
     asunder
-    obs-studio
     lmms-full
     (jackWrap audacity)
+
+    # emulators
+    cemu-ti
+
+    # general utility
+    tor-browser
+    obs-studio
   ];
 
   programs.vesktop = {

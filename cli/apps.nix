@@ -10,6 +10,7 @@
     typst
 
     # skid stuff
+    htop
     john
     yt-dlp
   ];
