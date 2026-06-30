@@ -28,6 +28,7 @@ in
     tor-browser
     asunder
     obs-studio
+    lmms-full
     (jackWrap audacity)
   ];
 
