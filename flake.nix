@@ -5,17 +5,12 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
-      spicetify-nix,
       ...
     }:
     let
@@ -32,13 +27,9 @@
             inherit system;
             config.permittedInsecurePackages = [ "pnpm-10.29.2" ];
           };
-
-          spicetifyPkgs = spicetify-nix.legacyPackages.${system};
         };
 
         modules = [
-          spicetify-nix.homeManagerModules.spicetify
-
           ./home.nix
         ];
       };

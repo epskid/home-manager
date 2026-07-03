@@ -1,7 +1,6 @@
 {
   pkgs,
   insecure,
-  spicetifyPkgs,
   ...
 }:
 
@@ -32,6 +31,7 @@ in
     blender
 
     # audio
+    spotify
     asunder
     lmms-full
     (jackWrap audacity)
@@ -55,15 +55,6 @@ in
       customTitleBar = false;
       discordBranch = "stable";
     };
-  };
-
-  programs.spicetify = {
-    enable = true;
-    enabledExtensions = with spicetifyPkgs.extensions; [
-      adblockify
-      hidePodcasts
-      keyboardShortcut
-    ];
   };
 
   programs.obsidian.enable = true;
