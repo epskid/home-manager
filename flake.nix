@@ -21,14 +21,6 @@
       homeConfigurations.jackblack = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        extraSpecialArgs = {
-          # remove when vesktop is updated!!
-          insecure = import nixpkgs {
-            inherit system;
-            config.permittedInsecurePackages = [ "pnpm-10.29.2" ];
-          };
-        };
-
         modules = [
           ./home.nix
         ];

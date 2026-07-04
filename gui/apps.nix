@@ -1,6 +1,5 @@
 {
   pkgs,
-  insecure,
   ...
 }:
 
@@ -33,7 +32,6 @@ in
     # audio
     spotify
     asunder
-    lmms-full
     (jackWrap audacity)
 
     # emulators
@@ -46,7 +44,6 @@ in
 
   programs.vesktop = {
     enable = true;
-    package = insecure.vesktop;
     settings = {
       arRPC = false;
       checkUpdates = false;
