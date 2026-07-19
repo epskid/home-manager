@@ -4,7 +4,10 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.package = pkgs.nix;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   targets.genericLinux.enable = true;
 

@@ -26,6 +26,8 @@
     };
     settings = {
       theme = "gruvbox_dark_soft_transparent";
+      editor.mouse = false;
+      editor.soft-wrap.enable = true;
       editor.cursor-shape.insert = "bar";
     };
     themes = {
