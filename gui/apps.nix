@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 
@@ -32,10 +33,7 @@ in
     # audio
     spotify
     asunder
-    (jackWrap audacity)
-
-    # emulators
-    cemu-ti
+    (jackWrap audacity_3)
 
     # general utility
     tor-browser
@@ -55,4 +53,15 @@ in
   };
 
   programs.obsidian.enable = true;
+
+  xdg.desktopEntries = {
+    cemu = {
+      categories = [ "Education" "Utility" ];
+      exec = "${lib.getExe pkgs.cemu-ti}";
+      genericName = "Calculator";
+      name = "CEmu";
+      terminal = false;
+      icon = "gnome-calculator";
+    };
+  };
 }

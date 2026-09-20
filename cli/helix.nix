@@ -37,6 +37,23 @@
           auto-format = true;
           language-servers = [ "pyright" ];
         }
+        {
+          name = "java";
+          scope = "source.java";
+          injection-regex = "java";
+          file-types = [ "java" ];
+          roots = [
+            "pom.xml"
+            "build.gradle"
+            ".helix_root"
+          ];
+          indent = {
+            tab-width = 2;
+            unit = "  ";
+          };
+          auto-format = true;
+          language-servers = [ "jdtls" ];
+        }
       ];
     };
     settings = {
