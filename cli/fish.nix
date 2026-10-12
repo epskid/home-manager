@@ -17,6 +17,7 @@
     interactiveShellInit = ''
       fish_vi_key_bindings
       fish_add_path ~/.cargo/bin/
+      fish_add_path ~/.bun/bin/
     '';
     functions = {
       fish_greeting.body = "";

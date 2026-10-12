@@ -3,8 +3,6 @@
 {
   home.packages = with pkgs; [
     # languages
-    uv
-    bun
     zig
     ghc
     typst
@@ -14,6 +12,10 @@
     john
     yt-dlp
   ];
+
+  # package managers
+  programs.uv.enable = true;
+  programs.bun.enable = true;
 
   programs.git = {
     enable = true;
