@@ -31,6 +31,7 @@ in
     blender
 
     # audio
+    spotify
     asunder
     (jackWrap audacity_3)
 

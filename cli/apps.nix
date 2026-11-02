@@ -46,9 +46,4 @@
     icons = "auto";
     enableFishIntegration = true;
   };
-
-  # apps
-  programs.spotify-player = {
-    enable = true;
-  };
 }
