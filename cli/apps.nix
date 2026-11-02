@@ -17,6 +17,7 @@
   programs.uv.enable = true;
   programs.bun.enable = true;
 
+  # general utility
   programs.git = {
     enable = true;
     settings = {
@@ -44,5 +45,10 @@
     enable = true;
     icons = "auto";
     enableFishIntegration = true;
+  };
+
+  # apps
+  programs.spotify-player = {
+    enable = true;
   };
 }
