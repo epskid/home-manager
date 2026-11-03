@@ -1,7 +1,6 @@
 {
   pkgs,
   lib,
-  spicetify-nix,
   ...
 }:
 
@@ -32,6 +31,7 @@ in
     blender
 
     # audio
+    spotify
     asunder
     (jackWrap audacity_3)
 
@@ -39,19 +39,6 @@ in
     tor-browser
     obs-studio
   ];
-
-  programs.spicetify =
-    let
-      spicePkgs = spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-    in
-    {
-      enable = true;
-      enabledExtensions = with spicePkgs.extensions; [
-        keyboardShortcut
-      ];
-      theme = spicePkgs.themes.onepunch;
-      colorScheme = "dark";
-    };
 
   programs.vesktop = {
     enable = true;
