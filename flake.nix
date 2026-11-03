@@ -5,12 +5,17 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
+      spicetify-nix,
       ...
     }:
     let
@@ -20,8 +25,10 @@
     {
       homeConfigurations.jackblack = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit spicetify-nix; };
 
         modules = [
+          spicetify-nix.homeManagerModules.default
           ./home.nix
         ];
       };
