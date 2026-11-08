@@ -24,7 +24,6 @@ in
   home.packages = with pkgs; [
     # 2d
     gimp
-    krita
     aseprite
 
     # 3d

@@ -15,6 +15,7 @@
     ./cli/apps.nix
     ./cli/fish.nix
     ./cli/helix.nix
+    ./cli/podman.nix
     ./cli/terminal.nix
 
     ./gui/apps.nix
