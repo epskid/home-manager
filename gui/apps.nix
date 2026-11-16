@@ -41,13 +41,36 @@ in
 
   programs.vesktop = {
     enable = true;
+    mutableSettings = true;
     settings = {
       arRPC = false;
       checkUpdates = false;
-      minimizeToTray = true;
-      tray = true;
       customTitleBar = false;
       discordBranch = "stable";
+      minimizeToTray = true;
+      tray = true;
+      hardwareAcceleration = true;
+      hardwareVideoAcceleration = false;
+      hardwareVideoEncoding = false;
+      nativeTitleBar = true;
+      staticTitle = false;
+      enableMenu = false;
+      enableShadow = true;
+      enableRoundedCorners = true;
+      enableSplashScreen = true;
+      splashTheming = true;
+      clickTrayToShowHide = false;
+      disableMinSize = false;
+      disableSmoothScroll = false;
+      enableTaskbarFlashing = false;
+      openLinksWithElectron = false;
+      autoStartMinimized = false;
+      splashPixelated = true;
+      webRTCIPHandlingPolicy = "default";
+      appBadge = true;
+      transparencyOption = "none";
+      splashColor = "rgb(235, 219, 178)";
+      splashBackground = "rgb(50, 48, 47)";
     };
   };
 
