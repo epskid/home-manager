@@ -6,6 +6,5 @@
     vvvvvv
     godot
     protonup-qt
-    prismlauncher
   ];
 }
