@@ -7,7 +7,6 @@
     extraPackages = with pkgs; [
       # lsp
       nil
-      zls
       pyright
       libclang
       tinymist
@@ -61,6 +60,8 @@
       editor.mouse = false;
       editor.soft-wrap.enable = true;
       editor.cursor-shape.insert = "bar";
+      editor.popup-border = "all";
+      editor.bufferline = "multiple";
     };
     themes = {
       gruvbox_dark_soft_transparent = {
