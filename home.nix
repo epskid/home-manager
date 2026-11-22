@@ -17,6 +17,7 @@
     ./cli/helix.nix
     ./cli/podman.nix
     ./cli/terminal.nix
+    ./cli/zellij.nix
 
     ./gui/apps.nix
     ./gui/games.nix
