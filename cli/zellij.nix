@@ -33,7 +33,7 @@
                       { close_on_exit = true; }
                       { floating = true; }
                       { pinned = true; }
-                      { name = "git =("; }
+                      { name = "git"; }
                       { x = "5%"; }
                       { y = "5%"; }
                       { width = "90%"; }
