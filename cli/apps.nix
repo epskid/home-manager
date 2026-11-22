@@ -29,6 +29,11 @@
     };
   };
 
+  programs.lazygit = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
   programs.fd.enable = true;
 
   programs.ripgrep.enable = true;
