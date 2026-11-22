@@ -60,8 +60,7 @@
       editor.mouse = false;
       editor.soft-wrap.enable = true;
       editor.cursor-shape.insert = "bar";
-      editor.popup-border = "all";
-      editor.bufferline = "multiple";
+      editor.popup-border = "popup";
     };
     themes = {
       gruvbox_dark_soft_transparent = {
