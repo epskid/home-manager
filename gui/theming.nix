@@ -16,6 +16,7 @@
     dotIcons.enable = true;
     name = "Vanilla-DMZ-AA";
     package = pkgs.vanilla-dmz;
+    size = 24;
   };
 
   fonts.fontconfig.enable = true;
