@@ -6,14 +6,16 @@
     nerd-fonts.caskaydia-cove
   ];
 
+  gtk.enable = true;
+
   home.pointerCursor = {
     enable = true;
     x11.enable = true;
     sway.enable = true;
     gtk.enable = true;
     dotIcons.enable = true;
-    name = "Maple";
-    package = pkgs.maplestory-cursor;
+    name = "Vanilla-DMZ-AA";
+    package = pkgs.vanilla-dmz;
   };
 
   fonts.fontconfig.enable = true;
