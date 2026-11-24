@@ -14,8 +14,8 @@
     sway.enable = true;
     gtk.enable = true;
     dotIcons.enable = true;
-    name = "Vanilla-DMZ-AA";
-    package = pkgs.vanilla-dmz;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
     size = 24;
   };
 
